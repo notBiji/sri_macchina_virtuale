@@ -60,6 +60,9 @@ Riavviare il servizio e testarne il funzionamento
 ```
   systemctl restart sshd
 ```
+Status e prova di connessione ssh 
+![](status_ssh.PNG)
+![](ssh.PNG)
 
 ### *http*
 Installazione e avvio del servizio:
@@ -75,6 +78,9 @@ Configurare il firewall per permettere l'accesso alla porta di default del servi
   firewall-cmd --reload
 ```
 Testing del servizio via web browser da host remoto `http://<ip_server>`
+
+Status del servizio http
+![](status_http.PNG)
 
 ### *DBMS MariaDB*
 Installazione del servizio (`mariadb-server`) e del client CLI (`mariadb`)
@@ -167,6 +173,13 @@ Apache fornisce questa funzionalità in modo nativo.
   Premendo invio verr&aacute; richiesta la password da associare all'utente specificato
 
 Testare il funzionamento.
+
+Alias phpmyadmin
+![](alias_phpmyadmin.PNG)
+Blocco access da remoto di utente root
+![](root_no_login_phpmyadmin.PNG)
+Set dei privilegi del nostro utente su phpmyadmin
+![](privilegi_phpmyadmin.PNG)
 
 ### *ftp*
 ##### File di configurazione
@@ -293,6 +306,10 @@ Proteggere il file db `/etc/vsftpd/virtual-users.db`
 ```
 Testing del servizio con FileZilla e gli utenti virtuali...<br/>
 **File di configurazione per le impostazioni correnti** `vsftpd.conf.03`
+
+Prova di upload di un file nella cartella dell'utente virtuale
+![](connessione_ftp.PNG)
+![](connessione_ftp2.PNG)
 
 ## Comandi accessori
 - **ip a** - restituisce le informazioni relative alla connessione di rete, compreso l'ind. IP del server che servirà per la configurazione dei servizi e per il testing degli stessi
